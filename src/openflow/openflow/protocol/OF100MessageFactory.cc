@@ -172,7 +172,7 @@ OFP_Packet_Out* OF100MessageFactory::createPacketOut(uint32_t* outports, int n_o
     msg->setHeader(header); 
 
     msg->setBuffer_id(buffer_id); // 4 Byte
-    msg->setIn_port(in_port); // 2 Byte
+    msg->setIn_port(in_port); // 4 Byte
     // actions_len 2 Byte
 
     msg->setActionsArraySize(n_outports); // 4 Byte per output action.
@@ -181,8 +181,8 @@ OFP_Packet_Out* OF100MessageFactory::createPacketOut(uint32_t* outports, int n_o
         action_output->port = outports[i];
         msg->setActions(i, *action_output);
     }
-
-    msg->setByteLength(16 + 4*n_outports);
+    // padded to 24 Byte in openflow protocol
+    msg->setByteLength(24 + 4*n_outports);
 
     if (buffer_id == OFP_NO_BUFFER)
     {   //No Buffer so send full frame.
