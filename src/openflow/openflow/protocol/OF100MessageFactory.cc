@@ -77,7 +77,7 @@ OFP_Features_Request* OF100MessageFactory::createFeatureRequest() {
     return featuresRequest;
 }
 
-OFP_Flow_Mod* OF100MessageFactory::createFlowModMessage(ofp_flow_mod_command mod_com,const oxm_basic_match& match, int pritority, uint32_t* outports, int n_outports, uint32_t idleTimeOut, uint32_t hardTimeOut) {
+OFP_Flow_Mod* OF100MessageFactory::createFlowModMessage(ofp_flow_mod_command mod_com,const oxm_basic_match& match, int pritority, uint32_t* outports, int n_outports, uint32_t idleTimeOut, uint32_t hardTimeOut, uint64_t cookie) {
     OFP_Flow_Mod *msg = new OFP_Flow_Mod("flow_mod");
 
     //set header info 8 Byte
@@ -95,7 +95,7 @@ OFP_Flow_Mod* OF100MessageFactory::createFlowModMessage(ofp_flow_mod_command mod
     // 4 Byte buffer_id
 
     msg->setFlags(0); // 2 Byte
-    msg->setCookie(42); // 8 Byte
+    msg->setCookie(cookie); // 8 Byte
     msg->setOut_port(outports[0]); // 2 Byte
 
     msg->setActionsArraySize(n_outports); // 4 Byte per output action.

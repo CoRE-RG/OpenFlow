@@ -85,7 +85,7 @@ public:
      * @param hardTimeOut   The hard Timeout for the flow entry.
      * @return              The created message.
      */
-    virtual OFP_Flow_Mod* createFlowModMessage(ofp_flow_mod_command mod_com,const oxm_basic_match& match, int pritority, uint32_t* outports, int n_outports, uint32_t idleTimeOut=1 , uint32_t hardTimeOut=0) = 0;
+    virtual OFP_Flow_Mod* createFlowModMessage(ofp_flow_mod_command mod_com,const oxm_basic_match& match, int pritority, uint32_t* outports, int n_outports, uint32_t idleTimeOut=1 , uint32_t hardTimeOut=0, uint64_t cookie=0) = 0;
 
     /**
      * Create an OFP_Hello message.
