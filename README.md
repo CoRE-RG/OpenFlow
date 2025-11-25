@@ -10,7 +10,7 @@ This fork contains modified sources to increase compatibility to the other frame
     * [https://omnetpp.org/download/old](https://omnetpp.org/download/old)
 2. Install OMNeT++
     * [https://doc.omnetpp.org/omnetpp/InstallGuide.pdf](https://doc.omnetpp.org/omnetpp/InstallGuide.pdf)
-3. Get INET framework 3.8.3
+3. Get INET framework 3.8.5
     * [https://inet.omnetpp.org/Download.html](https://inet.omnetpp.org/Download.html)
     * Disable the feature 'visualization' and all dependent features (causes build issues)
 4. Get OpenFlow framework
