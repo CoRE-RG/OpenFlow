@@ -18,28 +18,8 @@ This fork contains modified sources to increase compatibility to the other frame
 5. Working with the framework
     * Start the scenarios in the framework
 
-## Continuous Integration
-The build state of the master branch is monitored:
-* Building:
-<a><img src="https://jenkins.core-rg.de/buildStatus/icon?job=OpenFlow/OpenFlow"></a>
-
-<table>
-  <tr>
-    <th></th>
-    <th>Ubuntu 22.04</th>
-    <th>Windows 11</th>
-  </tr>
-  <tr>
-    <td>Building</td>
-    <td><img src="https://jenkins.core-rg.de/buildStatus/icon?job=OpenFlow/OpenFlow/Nodes=Ubuntu_22.04"></td>
-    <td><img src="https://jenkins.core-rg.de/buildStatus/icon?job=OpenFlow/OpenFlow/Nodes=Windows_11"></td>
-  </tr>
-  <tr>
-    <td>Tests</td>
-    <td><img src="https://jenkins.core-rg.de/buildStatus/icon?job=OpenFlow/OpenFlow_tests/Nodes=Ubuntu_22.04"></td>
-    <td><img src="https://jenkins.core-rg.de/buildStatus/icon?job=OpenFlow/OpenFlow_tests/Nodes=Windows_11"></td>
-  </tr>
-</table>
+## Status
+The project has been tested on Ubuntu 22.04 (+WSL) and Windows 11. 
 
 ## IMPORTANT
 The OpenFlow model is our original fork to improve compatibility with CoRE4INET for SDN4CoRE. Our simulation models are under continuous development: new parts are added, bugs are corrected, and so on. We cannot assert that the implementation will work fully according to the specifications. YOU ARE RESPONSIBLE YOURSELF TO MAKE SURE THAT THE MODELS YOU USE IN YOUR SIMULATIONS WORK CORRECTLY, AND YOU'RE GETTING VALID RESULTS. 
